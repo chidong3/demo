@@ -12,7 +12,6 @@ jobs:
       run: |
         cd D:\dev\workspace\demo
         git pull origin main
-        java -version
         net user
         mvn clean install
   build:
