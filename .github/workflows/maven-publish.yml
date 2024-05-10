@@ -13,6 +13,8 @@ jobs:
         cd D:\dev\workspace\demo
         git pull origin main
         net user
+        set PATH=%PATH%;D:\dev\tool\jdk-21.0.3\bin
+        java -version
         mvn clean install
   build:
     runs-on: ubuntu-latest
