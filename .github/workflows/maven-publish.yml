@@ -13,7 +13,9 @@ jobs:
         cd D:\dev\workspace\demo
         git pull origin main
         net user
+        path
         set PATH="%PATH%;D:\dev\tool\jdk-21.0.3\bin"
+        path
         java -version
         mvn clean install
   build:
