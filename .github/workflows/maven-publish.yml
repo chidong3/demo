@@ -11,7 +11,7 @@ jobs:
     - name: hi 1
       run: |
         cd D:\dev\workspace\demo
-        git pull
+        git pull origin main
     - name: Build with Maven
       run: mvn -B package --file pom.xml
   build:
