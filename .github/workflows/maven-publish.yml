@@ -8,6 +8,7 @@ jobs:
   selfcheck:
     runs-on: self-hosted
     steps:
+    - uses: actions/checkout@v4
     - name: hi 1
       run: echo hi 1
   build:
