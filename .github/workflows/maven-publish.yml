@@ -12,8 +12,9 @@ jobs:
       run: |
         cd D:\dev\workspace\demo
         git pull origin main
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+        java -version
+        net user
+        mvn clean install
   build:
     runs-on: ubuntu-latest
     steps:
