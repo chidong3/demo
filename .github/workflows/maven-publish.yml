@@ -14,7 +14,7 @@ jobs:
         git pull origin main
         net user
         $env:path
-        $Env:Path += "; D:\dev\tool\jdk-21.0.3\bin"
+        $Env:Path += "; D:\dev\tool\jdk-21.0.3\bin; D:\dev\tool\apache-maven-3.9.6\bin"
         $env:path
         java -version
         mvn clean install
