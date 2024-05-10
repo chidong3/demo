@@ -16,6 +16,20 @@ jobs:
         mvn -version
         cd ${{ github.workspace }}
         mvn clean install
+    - name: Build project & Run CQM analysis
+      uses: rs-sa/analysishub-service-cli@master
+      with:
+        analyzer-policy: svace-windows-java.sr
+        manager: da_node01
+        build-cmd: |
+          $Env:Path += "; D:\dev\tool\jdk-21.0.3\bin; D:\dev\tool\apache-maven-3.9.6\bin"
+          java -version
+          mvn -version
+          cd ${{ github.workspace }}
+          mvn clean install
+        cqm-fail-threshold: 5.0
+        enable-sam: true
+        sam-result-path: sam_report
   build:
     runs-on: ubuntu-latest
     steps:
